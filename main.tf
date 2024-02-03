@@ -11,8 +11,8 @@ provider "aws" {
 }
 
 module "aws_ec2" {
-  source = "../tf-modules/aws_ec2"
-  #source = "github.com/pd-joeljimenez/tf-modules//aws_ec2?ref=(GIT_COMMIT_ID)"
+  source = "github.com/pd-joeljimenez/tf-modules//aws_ec2?ref=2074af1"
+  //source = "../tf-modules/aws_ec2"
 
   deployment_name      = "aqua-homework"
   ami_filter           = "amzn2-ami-hvm*-x86_64-ebs"
@@ -38,8 +38,8 @@ module "aws_ec2" {
 }
 
 module "aws_vpc" {
-  #source = "github.com/pd-joeljimenez/tf-modules//aws_vpc?ref=(GIT_COMMIT_ID)"
-  source = "../tf-modules/aws_vpc"
+  source = "github.com/pd-joeljimenez/tf-modules//aws_vpc?ref=2074af1"
+  //source = "../tf-modules/aws_vpc"
 
   deployment_name = "aqua-homework"
   vpc_region      = "us-west-2"
@@ -57,7 +57,8 @@ module "aws_vpc" {
 }
 
 module "aws_securitygroup" {
-  source = "../tf-modules/aws_securitygroup"
+  source = "github.com/pd-joeljimenez/tf-modules//aws_securitygroup?ref=2074af1"
+  //source = "../tf-modules/aws_securitygroup"
 
   security_groups = [
     {
