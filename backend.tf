@@ -5,7 +5,7 @@
 resource "aws_s3_bucket" "backend_state" {
   bucket = "aqua-backend"
   tags = {
-    bucket        = "aqua-backend"
+    bucket      = "aqua-backend"
     Environment = "Lab"
     Owner       = "Joel Jimenez"
     Team        = "Infrastructure"
